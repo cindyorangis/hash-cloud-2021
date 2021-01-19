@@ -8,10 +8,11 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Hash Cloud Solutions</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
       <Header />
       <Main />
     </div>
