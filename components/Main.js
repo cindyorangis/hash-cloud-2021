@@ -2,10 +2,15 @@ import features from '../features'
 
 import Center from './Features/Center'
 import Item from './Features/Item'
+import CTA from './CTA'
 
 export default function Main() {
   return (
     <main>
+      <div className="bg-gray-50">
+        <CTA />
+      </div>
+
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
 
@@ -31,6 +36,7 @@ export default function Main() {
 
         </div>
       </div>
+
     </main>
   )
 }
