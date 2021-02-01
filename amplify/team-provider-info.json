@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hashcloud-dev-214436-authRole",
+      "UnauthRoleArn": "arn:aws:iam::495219756612:role/amplify-hashcloud-dev-214436-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::495219756612:role/amplify-hashcloud-dev-214436-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hashcloud-dev-214436-deployment",
+      "UnauthRoleName": "amplify-hashcloud-dev-214436-unauthRole",
+      "StackName": "amplify-hashcloud-dev-214436",
+      "StackId": "arn:aws:cloudformation:us-east-1:495219756612:stack/amplify-hashcloud-dev-214436/6d8d7ca0-6437-11eb-ae4e-12c270bd7978",
+      "AmplifyAppId": "d3as5t7xuwm92l"
+    },
+    "categories": {
+      "auth": {
+        "hashcloud3fd491ec": {}
+      }
+    }
+  }
+}

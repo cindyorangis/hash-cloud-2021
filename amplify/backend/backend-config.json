@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "hashcloud3fd491ec": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
