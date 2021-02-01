@@ -1,7 +1,7 @@
 import HamburgerButton from './HamburgerButton'
 import NavMenu from './NavMenu'
-import DropDown from './DropDown'
 import BellButton from '../BellButton'
+import Avatar from '../Avatar'
 import MobileMenu from './MobileMenu'
 
 export default function Navbar() {
@@ -13,7 +13,9 @@ export default function Navbar() {
           <NavMenu />
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <BellButton />
-            <DropDown />
+            <div className="ml-3 relative">
+              <Avatar />
+            </div>
           </div>
         </div>
       </div>
