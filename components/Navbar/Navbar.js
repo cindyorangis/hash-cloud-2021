@@ -2,7 +2,6 @@ import HamburgerButton from './HamburgerButton'
 import NavMenu from './NavMenu'
 import BellButton from '../BellButton'
 import AvatarButton from '../AvatarButton'
-import MobileMenu from './MobileMenu'
 
 export default function Navbar() {
   return (
@@ -18,10 +17,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="hidden sm:hidden">
-        <MobileMenu />
       </div>
     </nav>
   )
