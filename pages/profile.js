@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Auth } from 'aws-amplify'
+import '../configureAmplify'
+import SignIn from '../components/SignIn'
+
+const initialState = { email: '', password: '', authCode: '' }
 
 export default function Profile() {
+  const [uiState, setUiState] = useState(null)
+  const [formState, setFormState] = useState(initialState)
+
   useEffect(() => {
     checkUser()
     async function checkUser() {
@@ -10,13 +17,20 @@ export default function Profile() {
     }
   }, [])
 
+  function onChange(e) {
+    setFormState({ ...formState, [e.target.name]: e.target.value })
+  }
+
   return (
     <div>
-      <button 
-        onClick={() => Auth.federatedSignIn({ provider: "Google" })}
-      >
-        Sign in with Google
-      </button>
+      {
+        uiState === 'signIn' && (
+          <SignIn 
+            onChange={onChange} 
+            setUiState={setUiState}
+          />
+        )
+      }
     </div>
   )
 }
