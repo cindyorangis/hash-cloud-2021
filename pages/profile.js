@@ -33,32 +33,38 @@ export default function Profile() {
   }
 
   return (
-    <div>
-      {
-        uiState === 'signIn' && (
-          <SignIn 
-            onChange={onChange} 
-            setUiState={setUiState}
-          />
-        )
-      }
-      {
-        uiState === 'signedIn' && (
-          <div>
-            <p className="text-xl">Welcome, {user.attributes.email}</p>
-            <button 
-              className="text-white w-full mt-10 bg-pink-600 p-3 rounded"
-              onClick={() => {
-                Auth.signOut();
-                setUiState('signIn');
-                setUser(null)
-              }}
-            >
-              Sign Out
-            </button>
+    <div className="bg-gray-50 min-h-screen">
+      <div className="flex flex-col items-center">
+        <div className="max-w-full sm:w-540 mt-14">
+          <div className="bg-white py-14 px-16 shadow-form rounded">
+            {
+              uiState === 'signIn' && (
+                <SignIn 
+                  onChange={onChange} 
+                  setUiState={setUiState}
+                />
+              )
+            }
+            {
+              uiState === 'signedIn' && (
+                <div>
+                  <p className="text-xl">Welcome, {user.attributes.email}</p>
+                  <button 
+                    className="text-white w-full mt-10 bg-pink-600 p-3 rounded"
+                    onClick={() => {
+                      Auth.signOut();
+                      setUiState('signIn');
+                      setUser(null)
+                    }}
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              )
+            }
           </div>
-        )
-      }
+        </div>
+      </div>
     </div>
   )
 }
