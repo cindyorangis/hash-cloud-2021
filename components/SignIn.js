@@ -6,9 +6,6 @@ export default function SignIn() {
       <button onClick={() => Auth.federatedSignIn({ provider: "Google" })}>
         Sign in with Google
       </button>
-      <button onClick={() => Auth.signOut()}>
-        Sign Out
-      </button>
     </div>
   )
 }

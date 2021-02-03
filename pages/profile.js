@@ -8,17 +8,28 @@ const initialState = { email: '', password: '', authCode: '' }
 export default function Profile() {
   const [uiState, setUiState] = useState(null)
   const [formState, setFormState] = useState(initialState)
+  const [user, setUser] = useState(null)
+
 
   useEffect(() => {
     checkUser()
     async function checkUser() {
-      const user = await Auth.currentAuthenticatedUser()
-      console.log({ user })
+      try {
+        const user = await Auth.currentAuthenticatedUser()
+        setUser(user)
+        setUiState('signedIn')
+      } catch(err) {
+        setUser(null)
+        setUiState('signIn')
+      }
     }
   }, [])
 
   function onChange(e) {
-    setFormState({ ...formState, [e.target.name]: e.target.value })
+    setFormState({ 
+      ...formState, 
+      [e.target.name]: e.target.value 
+    })
   }
 
   return (
@@ -29,6 +40,23 @@ export default function Profile() {
             onChange={onChange} 
             setUiState={setUiState}
           />
+        )
+      }
+      {
+        uiState === 'signedIn' && (
+          <div>
+            <p className="text-xl">Welcome, {user.attributes.email}</p>
+            <button 
+              className="text-white w-full mt-10 bg-pink-600 p-3 rounded"
+              onClick={() => {
+                Auth.signOut();
+                setUiState('signIn');
+                setUser(null)
+              }}
+            >
+              Sign Out
+            </button>
+          </div>
         )
       }
     </div>
