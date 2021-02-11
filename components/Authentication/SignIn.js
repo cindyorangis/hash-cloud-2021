@@ -28,7 +28,8 @@ export default function SignIn({
         className="text-white w-full mt-6 bg-pink-600 p-3 rounded" 
         onClick={signIn}
       >
-        Sign In</button>
+        Sign In
+      </button>
 
       <p className="mt-12 text-sm font-light">
         Don't have an account? &nbsp;
