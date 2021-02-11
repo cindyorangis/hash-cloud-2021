@@ -31,7 +31,7 @@ export default function SignIn({
         Sign In</button>
 
       <p className="mt-12 text-sm font-light">
-        Don't have an account?
+        Don't have an account? &nbsp;
         <span
           className="cursor-pointer text-pink-600"
           onClick={() => setUiState('signUp')}

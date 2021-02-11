@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Auth } from 'aws-amplify'
 import '../configureAmplify'
-import SignIn from '../components/SignIn'
+import SignIn from '../components/SignIn/SignIn'
 
 const initialState = { email: '', password: '', authCode: '' }
 
