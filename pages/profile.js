@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Auth } from 'aws-amplify'
 import '../configureAmplify'
-import SignIn from '../components/SignIn/SignIn'
+import SignIn from '../components/Authentication/SignIn'
+import SignUp from '../components/Authentication/SignUp'
 
 const initialState = { email: '', password: '', authCode: '' }
 
@@ -37,6 +38,14 @@ export default function Profile() {
       <div className="flex flex-col items-center">
         <div className="max-w-full sm:w-540 mt-14">
           <div className="bg-white py-14 px-16 shadow-form rounded">
+            {
+              uiState === 'signUp' && (
+                <SignUp 
+                  onChange={onChange}
+                  setUiState={setUiState}
+                />
+              )
+            }
             {
               uiState === 'signIn' && (
                 <SignIn 
