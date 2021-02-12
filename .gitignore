@@ -45,7 +45,6 @@ build/
 dist/
 node_modules/
 package-lock.json
-aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
