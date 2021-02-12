@@ -1,0 +1,17 @@
+{
+  "name": "hx7es0o-q1j6wyd",
+  "hash": "fh3FvbjtKiNxVyfDDa1CoeXuJDakSR0JPA7CpMzsY9g=",
+  "description": "Default Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "C:\\Users\\lecin\\Documents\\repo\\hash-cloud\\.serverless_nextjs\\default-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs12.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::495219756612:role/hx7es0o-o61bmv4"
+  },
+  "arn": "arn:aws:lambda:us-east-1:495219756612:function:hx7es0o-q1j6wyd",
+  "region": "us-east-1"
+}
