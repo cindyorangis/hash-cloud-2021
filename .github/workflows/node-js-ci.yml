@@ -1,18 +1,18 @@
 name: node-js-ci
 on: 
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 jobs:
   build:
-    runs-on: [ ubuntu-latest, macos-latest, windows-latest ]
+    runs-on: [ubuntu-latest, macos-latest, windows-latest]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: [ 12.x, 14.x ]
+          node-version: [12.x, 14.x]
 
       - name: Install NPM dependencies
         run: npm install

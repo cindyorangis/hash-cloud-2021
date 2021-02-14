@@ -3,6 +3,8 @@ import { Auth } from 'aws-amplify';
 import '../configureAmplify';
 import SignIn from '../components/Authentication/SignIn';
 import SignUp from '../components/Authentication/SignUp';
+import ForgotPassword from '../components/Authentication/ForgotPassword';
+import ForgotPasswordSubmit from '../components/Authentication/ForgotPasswordSubmit';
 
 const initialState = { email: '', password: '', authCode: '' };
 
@@ -54,6 +56,8 @@ export default function Profile() {
                 </button>
               </div>
             )}
+            {uiState === 'forgotPassword' && <ForgotPassword onChange={onChange} setUiState={setUiState}/>}
+            {uiState === 'forgotPasswordSubmit' && <ForgotPasswordSubmit onChange={onChange} />}
           </div>
         </div>
       </div>
