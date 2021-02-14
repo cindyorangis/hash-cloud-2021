@@ -13,7 +13,10 @@ export default function ForgotPasswordSubmit({ onChange, forgotPasswordSubmit })
         <label className="text-sm">New password</label>
         <Input type="password" onChange={onChange} name="password" />
       </div>
-      <button className="text-white w-full mt-6 bg-pink-600 p-3 rounded" onClick={forgotPasswordSubmit}>
+      <button
+        className="text-white w-full mt-6 bg-pink-600 p-3 rounded"
+        onClick={forgotPasswordSubmit}
+      >
         Submit new password
       </button>
     </div>
