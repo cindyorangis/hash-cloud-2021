@@ -7,5 +7,5 @@ export default function Main() {
         </p>
       </div>
     </div>
-  )
+  );
 }

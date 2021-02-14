@@ -1,10 +1,8 @@
-import { Auth } from "aws-amplify";
-import SocialSignIn from './SocialSignIn'
-import Input from './Input'
+import { Auth } from 'aws-amplify';
+import SocialSignIn from './SocialSignIn';
+import Input from './Input';
 
-export default function SignIn({
-  onChange, setUiState, signIn
-}) {
+export default function SignIn({ onChange, setUiState, signIn }) {
   return (
     <div>
       <p className="text-3xl font-black text-center">Sign in to your account</p>
@@ -24,10 +22,7 @@ export default function SignIn({
         </label>
         <Input onChange={onChange} name="password" type="password" />
       </div>
-      <button 
-        className="text-white w-full mt-6 bg-pink-600 p-3 rounded" 
-        onClick={signIn}
-      >
+      <button className="text-white w-full mt-6 bg-pink-600 p-3 rounded" onClick={signIn}>
         Sign In
       </button>
 
@@ -43,5 +38,5 @@ export default function SignIn({
       </p>
       <SocialSignIn />
     </div>
-  )
+  );
 }

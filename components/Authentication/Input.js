@@ -3,7 +3,7 @@ export default function Input(props) {
     <input
       {...props}
       className="outline-none border-gray-300 border rounded p-2 mt-3 w-full 
-        focus:shadow-inputfocus focus:border-white"     
+        focus:shadow-inputfocus focus:border-white"
     />
-  )
+  );
 }

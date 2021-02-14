@@ -1,12 +1,12 @@
-import { Auth } from 'aws-amplify'
-import { FaGoogle } from 'react-icons/fa'
+import { Auth } from 'aws-amplify';
+import { FaGoogle } from 'react-icons/fa';
 
 export default function SocialSignIn() {
   return (
     <div className="flex flex-col">
-      <button 
+      <button
         className="mt-10 focus:outline-none"
-        onClick={() => Auth.federatedSignIn({ provider: "Google" })}
+        onClick={() => Auth.federatedSignIn({ provider: 'Google' })}
       >
         <div className="flex border border-gray-300 p-2 rounded-full items-center justify-center">
           <FaGoogle size="38" className="text-red-600" />
@@ -14,5 +14,5 @@ export default function SocialSignIn() {
         </div>
       </button>
     </div>
-  )
+  );
 }

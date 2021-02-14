@@ -1,7 +1,7 @@
-import HamburgerButton from './HamburgerButton'
-import NavMenu from './NavMenu'
-import BellButton from '../BellButton'
-import AvatarButton from '../AvatarButton'
+import HamburgerButton from './HamburgerButton';
+import NavMenu from './NavMenu';
+import BellButton from '../BellButton';
+import AvatarButton from '../AvatarButton';
 
 export default function Navbar() {
   return (
@@ -19,5 +19,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

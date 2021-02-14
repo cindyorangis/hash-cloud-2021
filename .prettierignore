@@ -1,0 +1,9 @@
+public
+package.json
+package-lock.json
+node_modules/
+.github
+.next
+.serverless
+.serverless_nextjs
+.vscode
