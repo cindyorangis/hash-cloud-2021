@@ -7,18 +7,21 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest, macos-latest, windows-latest ]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: [ 12.x, 14.x ]
 
       - name: Install NPM dependencies
         run: npm install
 
       - name: Prettier Check
         run: npm run prettier-check
+
+      - name: Test
+        run: npm run test
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
