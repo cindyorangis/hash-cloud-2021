@@ -1,6 +1,10 @@
+import { useState } from 'react';
+import { Auth } from 'aws-amplify';
 import Link from 'next/link';
 
 export default function DropDown() {
+  const [user, setUser] = useState(null);
+
   return (
     <div className="ml-3 relative">
       <div
@@ -19,9 +23,18 @@ export default function DropDown() {
             Settings
           </a>
         </Link>
-        <a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-          Sign out
-        </a>
+        <Link href="/">
+          <a
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            onClick={() => {
+              Auth.signOut();
+              setUser(null);
+            }}
+          >
+            Sign out
+          </a>
+        </Link>
       </div>
     </div>
   );
