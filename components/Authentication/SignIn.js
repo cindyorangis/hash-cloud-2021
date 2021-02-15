@@ -14,7 +14,7 @@ export default function SignIn({ onChange, setUiState, signIn }) {
         <label className="text-sm">
           Password
           <span
-            className="ml-8 sm:ml-48 text-pink-600"
+            className="cursor-pointer ml-8 sm:ml-48 text-indigo-600"
             onClick={() => setUiState('forgotPassword')}
           >
             Forgot your password?
@@ -22,14 +22,14 @@ export default function SignIn({ onChange, setUiState, signIn }) {
         </label>
         <Input onChange={onChange} name="password" type="password" />
       </div>
-      <button className="text-white w-full mt-6 bg-pink-600 p-3 rounded" onClick={signIn}>
+      <button className="text-white w-full mt-6 bg-indigo-600 p-3 rounded" onClick={signIn}>
         Sign In
       </button>
 
       <p className="mt-12 text-sm font-light">
         Don't have an account? &nbsp;
         <span
-          className="cursor-pointer text-pink-600"
+          className="cursor-pointer text-indigo-600"
           onClick={() => setUiState('signUp')}
           role="button"
         >

@@ -1,9 +1,51 @@
+import { Auth } from 'aws-amplify';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import '../../configureAmplify';
+import { FaLock } from 'react-icons/fa';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import BellButton from '../BellButton';
 import AvatarButton from '../AvatarButton';
 
 export default function Navbar() {
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    checkUser();
+  }, []);
+
+  async function checkUser() {
+    try {
+      const user = await Auth.currentAuthenticatedUser();
+      setUser(user);
+    } catch (err) {
+      setUser(null);
+    }
+  }
+
+  if (!user)
+    return (
+      <nav className="bg-gray-800">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="relative flex items-center justify-between h-16">
+            <HamburgerButton />
+            <NavMenu />
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <Link href="/profile">
+                <a className="text-gray-300 bg-indigo-600 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex flex-row items-center gap-x-2">
+                  <FaLock />
+                  Sign In
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+    );
+
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

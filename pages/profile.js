@@ -110,7 +110,7 @@ export default function Profile() {
               <div>
                 <p className="text-xl">Welcome, {user.attributes.email}</p>
                 <button
-                  className="text-white w-full mt-10 bg-pink-600 p-3 rounded"
+                  className="text-white w-full mt-10 bg-indigo-600 p-3 rounded"
                   onClick={() => {
                     Auth.signOut();
                     setUiState('signIn');

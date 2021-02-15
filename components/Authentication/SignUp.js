@@ -13,14 +13,14 @@ export default function SignUp({ onChange, setUiState, signUp }) {
         <label className="text-sm">Password</label>
         <Input onChange={onChange} name="password" type="password" />
       </div>
-      <button className="text-white w-full mt-6 bg-pink-600 p-3 rounded" onClick={signUp}>
+      <button className="text-white w-full mt-6 bg-indigo-600 p-3 rounded" onClick={signUp}>
         Sign Up
       </button>
 
       <p className="mt-12 text-sm font-light">
         Have an account? &nbsp;
         <span
-          className="cursor-pointer text-pink-600"
+          className="cursor-pointer text-indigo-600"
           onClick={() => setUiState('signIn')}
           role="button"
         >
