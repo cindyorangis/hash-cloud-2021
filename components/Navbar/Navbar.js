@@ -1,13 +1,13 @@
-import { Auth } from 'aws-amplify';
 import { useEffect, useState } from 'react';
+import { Auth } from 'aws-amplify';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import '../../configureAmplify';
-import { FaLock } from 'react-icons/fa';
-import { FaRegBell } from 'react-icons/fa';
 import HamburgerButton from './HamburgerButton';
 import NavMenu from './NavMenu';
 import AvatarButton from '../AvatarButton';
+import { FaLock } from 'react-icons/fa';
+import { FaRegBell } from 'react-icons/fa';
 
 export default function Navbar() {
   const [user, setUser] = useState(null);

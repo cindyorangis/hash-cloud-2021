@@ -6,6 +6,7 @@ import SignUp from '../components/Authentication/SignUp';
 import ForgotPassword from '../components/Authentication/ForgotPassword';
 import ForgotPasswordSubmit from '../components/Authentication/ForgotPasswordSubmit';
 import ConfirmSignUp from '../components/Authentication/ConfirmSignUp';
+import { useRouter } from 'next/router';
 
 const initialState = { email: '', password: '', authCode: '' };
 
@@ -14,6 +15,7 @@ export default function Profile() {
   const [formState, setFormState] = useState(initialState);
   const [user, setUser] = useState(null);
   const { email, password, authCode } = formState;
+  const router = useRouter();
 
   useEffect(() => {
     checkUser();
@@ -111,6 +113,13 @@ export default function Profile() {
                 <p className="text-xl">Welcome, {user.attributes.email}</p>
                 <button
                   className="text-white w-full mt-10 bg-indigo-600 p-3 rounded"
+                  onClick={() => {
+                    router.push('/');
+                  }}>
+                  Go Home
+                </button>
+                <button
+                  className="text-white w-full mt-4 bg-indigo-600 p-3 rounded"
                   onClick={() => {
                     Auth.signOut();
                     setUiState('signIn');

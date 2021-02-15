@@ -1,4 +1,4 @@
-export default function Item({ feature, description, icon }) {
+export default function Item({ feature, description }) {
   return (
     <div className="flex">
       <div className="flex-shrink-0">

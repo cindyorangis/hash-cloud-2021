@@ -1,6 +1,5 @@
-import { Auth } from 'aws-amplify';
-import SocialSignIn from './SocialSignIn';
 import Input from './Input';
+import SocialSignIn from './SocialSignIn';
 
 export default function SignIn({ onChange, setUiState, signIn }) {
   return (

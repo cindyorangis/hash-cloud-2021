@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Auth } from 'aws-amplify';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function DropDown() {
   const [user, setUser] = useState(null);
+  const router = useRouter();
 
   return (
     <div className="ml-3 relative">
@@ -30,6 +32,7 @@ export default function DropDown() {
             onClick={() => {
               Auth.signOut();
               setUser(null);
+              router.reload();
             }}
           >
             Sign out

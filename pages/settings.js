@@ -1,5 +1,5 @@
-import { Auth } from 'aws-amplify';
 import { useState, useEffect } from 'react';
+import { Auth } from 'aws-amplify';
 import { useRouter } from 'next/router';
 import '../configureAmplify';
 

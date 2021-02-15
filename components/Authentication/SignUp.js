@@ -1,4 +1,3 @@
-import { Auth } from 'aws-amplify';
 import Input from './Input';
 
 export default function SignUp({ onChange, setUiState, signUp }) {
