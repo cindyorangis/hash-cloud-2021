@@ -9,3 +9,4 @@ node_modules/
 .vscode
 amplify/
 aws-exports.js
+graphql/
