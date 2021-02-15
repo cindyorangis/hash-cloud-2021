@@ -115,7 +115,8 @@ export default function Profile() {
                   className="text-white w-full mt-10 bg-indigo-600 p-3 rounded"
                   onClick={() => {
                     router.push('/');
-                  }}>
+                  }}
+                >
                   Go Home
                 </button>
                 <button
