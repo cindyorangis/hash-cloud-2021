@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "http://localhost:3000/",
-        "redirectSignOut": "htt://localhost:3000/",
+        "redirectSignIn": "https://hashcloud.ca/,http://localhost:3000/",
+        "redirectSignOut": "https://hashcloud.ca/,http://localhost:3000/",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
