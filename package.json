@@ -16,6 +16,7 @@
     "autoprefixer": "^10.2.1",
     "aws-amplify": "^3.3.15",
     "next": "10.0.6",
+    "pdfjs-dist": "^2.6.347",
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
